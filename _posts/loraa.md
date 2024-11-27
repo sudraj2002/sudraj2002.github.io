@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /images/
+image: /images/loraa.png
 authors: "<strong>Sudarshan Rajagopalan</strong>, Vishal M. Patel"
 title: "Low-rank Adaptation-based All-Weather Removal for Autonomous Navigation"
 categories: research

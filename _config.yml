@@ -21,7 +21,7 @@ repository               : "sudraj2002/sudraj2002.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/3.jpg"
+  avatar           : "3.jpg"
   name             : "Sudarshan Rajagopalan"
   pronouns         : # example: "she/her"  
   bio              : "2nd year ECE PhD student at VIU Lab"

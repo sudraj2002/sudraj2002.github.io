@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /images/
+image: /images/awracle.png
 authors: "<strong>Sudarshan Rajagopalan</strong>, Vishal M. Patel"
 title: "<i>AWRaCLe</i>: All-Weather Image Restoration using Visual In-Context Learning"
 collection: publications

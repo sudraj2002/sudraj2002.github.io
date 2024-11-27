@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /images/
+image: /images/remotetask.png
 title: "Remote Task-oriented Grasp Area Teaching By Non-Experts through Interactive Segmentation and Few-Shot Learning"
 authors: "Furkan Kaynar*, <strong>Sudarshan Rajagopalan*</strong>, Shaobo Zhou, Eckehard Steinbach"
 categories: conferences

@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /images/
+image: /images/gendeg.png
 authors: "<strong>Sudarshan Rajagopalan</strong>, Nithin Gopalakrishnan Nair, Jay N. Paranjape, Vishal M. Patel"
 title: "GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration"
 categories: research

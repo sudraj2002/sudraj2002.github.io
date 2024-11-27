@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /images/
+image: /images/spectrum.png
 authors: "Kitty Varghese, <strong>Sudarshan Rajagopalan</strong>, Mohit Lamba, Kaushik Mitra"
 title: "Spectrum-inspired Low-light Image Translation for Saliency Detection"
 collection: publications

@@ -82,12 +82,12 @@
           {% if cat == 'research' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/{{post.image}}" alt="project image" style="max-width:300px; max-height:300px;" />
+              <img src="/{{post.image}}" alt="project image" style="max-width:300px; max-height:200px, padding=20px;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
-              {{post.authors}}
+              <h4>{{post.authors}}</h4>
 
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}

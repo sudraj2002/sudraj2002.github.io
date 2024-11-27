@@ -4,7 +4,8 @@ image: /images/awracle.png
 authors: "<strong>Sudarshan Rajagopalan</strong>, Vishal M. Patel"
 title: "<i>AWRaCLe</i>: All-Weather Image Restoration using Visual In-Context Learning"
 collection: publications
-categories: "research"
+categories: 
+  - 'research'
 author: "Sudarshan Rajagopalan"
 website: "https://sudraj2002/awraclepage/"
 date: 2024-08-30

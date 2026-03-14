@@ -6,7 +6,7 @@ title: "RestoreVAR: Visual Autoregressive Generation for All-in-One Image Restor
 categories: 
   - 'research'
 # excerpt: 'In this work, we explore the usage of diffusion models as a degradation synthesis pipeline for improving the generalizability of image restoration models.'
-date: 2025-05-15
+date: 2026-01-26
 venue: 'The Fourteenth International Conference on Learning Representations (ICLR 2026)'
 website: 'https://sudraj2002.github.io/restorevarpage/'
 author: "Sudarshan Rajagopalan"

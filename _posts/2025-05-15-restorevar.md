@@ -7,7 +7,7 @@ categories:
   - 'research'
 # excerpt: 'In this work, we explore the usage of diffusion models as a degradation synthesis pipeline for improving the generalizability of image restoration models.'
 date: 2025-05-15
-venue: 'Under review'
+venue: 'The Fourteenth International Conference on Learning Representations (ICLR 2026)'
 website: 'https://sudraj2002.github.io/restorevarpage/'
 author: "Sudarshan Rajagopalan"
 arxiv: 'https://arxiv.org/abs/2505.18047'

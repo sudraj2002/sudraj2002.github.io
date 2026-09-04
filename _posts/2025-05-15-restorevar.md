@@ -5,11 +5,12 @@ authors: "<strong>Sudarshan Rajagopalan</strong>, Kartik Narayan, Vishal M. Pate
 title: "RestoreVAR: Visual Autoregressive Generation for All-in-One Image Restoration"
 categories: 
   - 'research'
-# excerpt: 'In this work, we explore the usage of diffusion models as a degradation synthesis pipeline for improving the generalizability of image restoration models.'
 date: 2026-01-26
 venue: 'The Fourteenth International Conference on Learning Representations (ICLR 2026)'
+short: 'ICLR 2026'
 website: 'https://sudraj2002.github.io/restorevarpage/'
 author: "Sudarshan Rajagopalan"
 arxiv: 'https://arxiv.org/abs/2505.18047'
 code: https://github.com/sudraj2002/RestoreVAR
+selected: true
 ---

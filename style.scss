@@ -1,105 +1,212 @@
 ---
 ---
 
-//
-// IMPORTS
-//
+/* =========================================================
+   sudraj2002.github.io
+   Single-page academic homepage. Barron-style structure,
+   fresher treatment: Bricolage Grotesque + IBM Plex,
+   ultramarine accent, venue chips, light/dark aware.
+   ========================================================= */
 
-//@import "reset";
-//@import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
-a {
-  color: #1772d0;
-  text-decoration: none;
+:root {
+  --bg:         #F4F6F9;
+  --bg-2:       #FFFFFF;
+  --ink:        #10141B;
+  --ink-2:      #3A424E;
+  --meta:       #66707F;
+  --rule:       #D9DEE6;
+  --accent:     #2A46E8;
+  --accent-ink: #FFFFFF;
+  --amber:      #B8731C;
+  --amber-soft: #F7E7CF;
+  --chip:       #E7EBF3;
+  --shadow:     0 1px 0 rgba(16,20,27,.04), 0 12px 32px -18px rgba(16,20,27,.25);
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:    "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --max: 900px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #0D1117;
+    --bg-2:       #141A22;
+    --ink:        #E9EDF3;
+    --ink-2:      #B9C2CE;
+    --meta:       #8A95A5;
+    --rule:       #26303C;
+    --accent:     #6D85FF;
+    --accent-ink: #0D1117;
+    --amber:      #E8A94F;
+    --amber-soft: #3A2C14;
+    --chip:       #1D2530;
+    --shadow:     0 1px 0 rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.7);
+  }
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-display: auto;
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 { margin: 0; font-family: var(--display); text-wrap: balance; }
+h1 { font-size: 44px; font-weight: 800; line-height: 1.02; letter-spacing: -.025em; margin: 6px 0 18px; }
+h2 { font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
+h3 { font-size: 17px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+p  { margin: 0 0 12px; color: var(--ink-2); }
+p:last-child { margin-bottom: 0; }
+em { font-style: italic; }
+strong { color: var(--ink); font-weight: 600; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--meta);
+  margin: 0;
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-display: auto;
+/* ---------- page frame ---------- */
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 44px 28px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 }
 
-h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-  font-display: auto;
-  font-weight: normal;
-  padding: 0px;
-  margin: 0px;
-  display:inline; 
+/* ---------- hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 40px;
+  align-items: start;
 }
+.hero-text { min-width: 0; max-width: 62ch; }
+.hero-photo { padding-top: 30px; }
 
-h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  font-display: auto;
-  padding: 0px;
-  margin: 0px;
-  display:inline; 
-}
-
-h1 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: normal;
-  font-display: auto;
-  text-align: center;
-  padding: 0px;
-  margin-block-start: 14px;
-  margin-block-end: 14px;
-  margin-left: 0px;
-  margin-right: 0px;
-
-}
-
-.one {
-  width: 160px;
-  height: 160px;
+.portrait {
   position: relative;
+  width: 100%;
+  aspect-ratio: 560 / 660;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--chip);
+  box-shadow: var(--shadow);
+}
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; }
+
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.links a {
+  display: inline-flex; align-items: center;
+  padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--rule); background: var(--bg-2);
+  color: var(--ink); font-size: 13.5px; font-weight: 500;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.links a.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.links a.primary:hover { color: var(--accent-ink); opacity: .92; }
+
+/* ---------- sections ---------- */
+.section { display: flex; flex-direction: column; gap: 20px; }
+.section-head a.eyebrow:hover { color: var(--accent); text-decoration: none; }
+.section-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  border-bottom: 1px solid var(--rule); padding-bottom: 12px;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* ---------- news ---------- */
+.news { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.news li { display: grid; grid-template-columns: 82px 1fr; gap: 14px; font-size: 14.5px; color: var(--ink-2); }
+.news .date {
+  font-family: var(--mono); font-size: 12px; color: var(--meta);
+  padding-top: 3px; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.news-scroll {
+  max-height: 230px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+.news-scroll::-webkit-scrollbar { width: 8px; }
+.news-scroll::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+.news-scroll::-webkit-scrollbar-thumb:hover { background: var(--meta); }
+
+/* ---------- publications ---------- */
+.pubs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.pub {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: border-color .15s ease;
+}
+.pub:hover { border-color: var(--accent); }
+
+.pub-thumb { background: #fff; border-radius: 5px; overflow: hidden; border: 1px solid var(--rule); }
+.pub-thumb picture, .pub-thumb img { display: block; width: 100%; height: auto; }
+.pub-thumb-placeholder { aspect-ratio: 3 / 2; background: var(--chip); }
+
+.pub-body { display: flex; flex-direction: column; gap: 5px; }
+.pub-title a { color: var(--accent); }
+.pub-title a:hover { text-decoration: underline; }
+.pub-authors { font-size: 14px; }
+.pub-authors strong { font-weight: 600; }
+.pub-venue { font-size: 13.5px; color: var(--meta); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pub-links { display: flex; gap: 14px; font-size: 13.5px; font-weight: 500; margin-top: 4px; }
+.pub-links a::before { content: "↗ "; color: var(--meta); font-weight: 400; }
+
+.chip {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em;
+  padding: 3px 8px; border-radius: 3px;
+  background: var(--chip); color: var(--ink);
+}
+.chip.review { background: var(--amber-soft); color: var(--amber); }
+
+/* ---------- footer ---------- */
+.footer {
+  padding-top: 16px; border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--meta); font-size: 12.5px;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* ---------- responsive ---------- */
+@media (max-width: 760px) {
+  .page { padding: 28px 18px 48px; gap: 44px; }
+  h1 { font-size: 34px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; }
+  .hero-photo { padding-top: 0; order: -1; max-width: 200px; }
+  .pub { grid-template-columns: 1fr; gap: 14px; padding: 14px; }
+  .pub-thumb { max-width: 280px; }
+  .news li { grid-template-columns: 74px 1fr; }
 }
-
-span.highlight {
-  background-color: #ffffd0;
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  .hero-photo, .footer { display: none; }
+  .news-scroll { max-height: none; overflow: visible; }
+  .pub { box-shadow: none; break-inside: avoid; }
+  a { color: inherit; }
 }
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
-//@import "svg-icons";

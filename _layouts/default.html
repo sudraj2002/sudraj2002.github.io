@@ -1,189 +1,172 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.name }}</title>
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+
+  <!-- Social preview cards (Slack, LinkedIn, Twitter/X, iMessage) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.name }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.name }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/images/profile.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>{{ site.name }}</title>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Sudarshan Rajagopalan
-              </h1>
-              <p>
-                I am a final year PhD student in the
-                <a href="https://engineering.jhu.edu/vpatel36/" target="_blank">Vision and Image Understanding (VIU) Lab</a>
-                at <a href="https://www.jhu.edu/" target="_blank">Johns Hopkins University</a>, advised by
-                <a href="https://engineering.jhu.edu/vpatel36/team/vishalpatel/" target="_blank">Prof. Vishal Patel</a>.
-                <!--
-                My research focuses on computer vision, specifically algorithms for image restoration leveraging recent advancements 
-                such as latent diffusion models, visual in-context learning, parameter-efficient fine-tuning, and vision-language models.
-                I work in the area of computer vision, focusing on developing image and video restoration algorithms with enhanced real-world applicability. 
-                My research leverages generative AI techniques such as autoregressive image generation and latent diffusion models, as well as other 
-                advanced concepts like visual in-context learning and parameter-efficient fine-tuning (PEFT), to enhance restoration performance. 
-                I am also keenly interested in solving computer vision problems involving multimodal generation, vision-language models, and large language models (LLMs).
-                -->
-                I work on generative models for vision, with an emphasis on adapting and leveraging them for real-world image and video restoration. My research spans diffusion and autoregressive models, 
-                as well as generative transport methods such as Schrödinger bridges. I am broadly interested in large-scale image and video generation, multimodal and omni-modal models, 
-                and post-training of generative models.
-              </p>
-              <p>
-                I was a Research Intern at
-                <a href="https://www.dolby.com" target="_blank">Dolby Laboratories</a>,
-                where I worked on large-scale video diffusion models for video enhancement under
-                <a href="https://www.linkedin.com/in/tsung-wei-huang-63b728122/" target="_blank">Dr. Tsung-Wei Huang</a>
-                and
-                <a href="https://scholar.google.com/citations?user=SmSs6d0AAAAJ&hl=en" target="_blank">Dr. Shiv Gehlot</a>.
-                I am currently a Research Intern with the Computational Imaging Team at
-                <a href="https://about.google/" target="_blank">Google</a>.
-              </p>
-              
-              <p>
-                I completed my undergraduate studies at the
-                <a href="https://www.mitindia.edu/" target="_blank">Madras Institute of Technology, Anna University</a>.
-                I received the
-                <a href="https://www.daad.in/en/" target="_blank">DAAD WISE</a> scholarship for an internship with
-                <a href="https://www.professoren.tum.de/en/steinbach-eckehard" target="_blank">Prof. Eckehard Steinbach</a> at
-                <a href="https://www.tum.de/en/" target="_blank">TUM</a>, Germany.
-                I also worked with
-                <a href="https://www.ee.iitm.ac.in/kmitra/" target="_blank">Prof. Kaushik Mitra</a> at the
-                <a href="https://www.ee.iitm.ac.in/comp_photolab/" target="_blank">Computational Imaging Lab</a>,
-                <a href="https://www.iitm.ac.in/" target="_blank">IIT Madras</a>, on deep learning-based image restoration problems.
-              </p>
+<main class="page">
 
-              <p style="text-align:center">
-                <a href="https://drive.google.com/file/d/1tkxB6MdvQbK0B_9foscHGsS5wa91yOz2/view?usp=sharing" target="_blank">CV</a> &nbsp;/&nbsp;
-                <a href="mailto:sambasa2@jhu.edu" target="_blank">Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/sudraj2002">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=SGty2eUAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/sudarshan-rajagopalan-0989a9213"> LinkedIn </a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/3.jpg">
-            </td>
-          </tr>
-        </table>
+  <!-- ===== Header / bio ===== -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Sudarshan Rajagopalan</h1>
 
+      <p>
+        I am a final-year PhD student in the
+        <a href="https://engineering.jhu.edu/vpatel36/" target="_blank" rel="noopener">Vision and Image Understanding (VIU) Lab</a>
+        at <a href="https://www.jhu.edu/" target="_blank" rel="noopener">Johns Hopkins University</a>, advised by
+        <a href="https://engineering.jhu.edu/vpatel36/team/vishalpatel/" target="_blank" rel="noopener">Prof. Vishal M. Patel</a>.
+        I expect to graduate in December 2026.
+      </p>
 
-        <!-- News Section -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>News</h2>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <p><strong>May, 2026:</strong> Summer Intern at Google.</p>
-              <p><strong>January, 2026:</strong> One paper accepted at ICLR 2026.</p>
-              <p><strong>September, 2025:</strong> Fall Intern at Dolby Laboratories.</p>
-              <p><strong>February, 2025:</strong> Two Papers accepted at CVPR 2025.</p>
-              <p><strong>January, 2025:</strong> One Paper accepted at ICRA 2025.</p>
-              <p><strong>December, 2024:</strong> One Paper accepted at AAAI 2025.</p>
-              <p><strong>August, 2023:</strong> Joined VIU Lab, JHU as a PhD student.</p>
-              <p><strong>December, 2022:</strong> One Paper accepted at AAAI Workshop 2023.</p>
-              <p><strong>November, 2022:</strong> One Paper accepted at ICVGIP 2022 (spotlight).</p>
-            </td>
-          </tr>
-        </table>
-        <br>
+      <p>
+        I work on generative models for vision, with an emphasis on adapting and leveraging them for real-world
+        image and video restoration and enhancement. My research spans diffusion and autoregressive models, as well as
+        generative transport methods such as Schr&ouml;dinger bridges. I am broadly interested in large-scale image and
+        video generation, multimodal and omni-modal models, and post-training of generative models.
+      </p>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Publications</h2>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <p>
+        I am currently a Research Intern with the Computational Imaging Team at
+        <a href="https://research.google/" target="_blank" rel="noopener">Google</a>, Mountain View, working on
+        generative models for synthetic data generation from unpaired data.
+        Previously, I was a Research Intern at
+        <a href="https://www.dolby.com" target="_blank" rel="noopener">Dolby Laboratories</a>,
+        where I worked on large-scale video diffusion models for video enhancement with
+        <a href="https://www.linkedin.com/in/tsung-wei-huang-63b728122/" target="_blank" rel="noopener">Dr. Tsung-Wei Huang</a>
+        and
+        <a href="https://scholar.google.com/citations?user=SmSs6d0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Shiv Gehlot</a>.
+      </p>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/{{post.image}}" alt="project image" style="max-width:300px; max-height:200px; padding:10px;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{ post.title }}</h3>
-              <p>{{ post.authors }}</p>
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">Paper</a>
-              {% endif %}
-              {% if post.video %}
-              | <a href="{{post.video}}">Video</a>
-              {% endif %}
-              {% if post.code %}
-              | <a href="{{post.code}}">Code</a>
-              {% endif %}
-              {% if post.poster %}
-              | <a href="{{post.poster}}">Poster</a>
-              {% endif %}
-              {% if post.slides %}
-              | <a href="{{post.slides}}">Slides</a>
-              {% endif %}
-              {% if post.website %}
-              | <a href="{{post.website}}">Website</a>
-              {% endif %}
-              {% if post.youtube %}
-              | <a href="{{post.youtube}}">Youtube</a>
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
+      <p>
+        I completed my undergraduate studies at the
+        <a href="https://www.mitindia.edu/" target="_blank" rel="noopener">Madras Institute of Technology, Anna University</a>.
+        I received the <a href="https://www.daad.in/en/" target="_blank" rel="noopener">DAAD WISE</a> scholarship for an
+        internship with
+        <a href="https://www.professoren.tum.de/en/steinbach-eckehard" target="_blank" rel="noopener">Prof. Eckehard Steinbach</a>
+        at <a href="https://www.tum.de/en/" target="_blank" rel="noopener">TUM</a>, Germany, and worked with
+        <a href="https://www.ee.iitm.ac.in/kmitra/" target="_blank" rel="noopener">Prof. Kaushik Mitra</a> at the
+        <a href="https://www.ee.iitm.ac.in/comp_photolab/" target="_blank" rel="noopener">Computational Imaging Lab</a>,
+        <a href="https://www.iitm.ac.in/" target="_blank" rel="noopener">IIT Madras</a>, on deep learning-based image restoration.
+        I serve as a reviewer for CVPR, ECCV, ICLR, NeurIPS, AAAI, TIP, and TPAMI.
+      </p>
+
+      <p><strong>I am looking for full-time opportunities starting early 2027.</strong></p>
+
+      <nav class="links" aria-label="Profile links">
+        <a class="primary" href="https://drive.google.com/file/d/1tkxB6MdvQbK0B_9foscHGsS5wa91yOz2/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        <a href="mailto:sambasa2@jhu.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=SGty2eUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/sudraj2002" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sudarshan-rajagopalan-0989a9213" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+
+    <div class="hero-photo">
+      <div class="portrait">
+        <img src="{{ site.baseurl }}/images/profile.jpg" alt="Photo of Sudarshan Rajagopalan" width="560" height="660">
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== News ===== -->
+  <section class="section" id="news">
+    <div class="section-head"><h2>News</h2></div>
+    <div class="news-scroll">
+      <ul class="news">
+        <li><span class="date">May 2026</span> <span>Summer Intern at <strong>Google</strong>.</span></li>
+        <li><span class="date">Jan 2026</span> <span>One paper accepted at <strong>ICLR 2026</strong>.</span></li>
+        <li><span class="date">Sep 2025</span> <span>Fall Intern at <strong>Dolby Laboratories</strong>.</span></li>
+        <li><span class="date">Feb 2025</span> <span>Two papers accepted at <strong>CVPR 2025</strong>.</span></li>
+        <li><span class="date">Jan 2025</span> <span>One paper accepted at <strong>ICRA 2025</strong>.</span></li>
+        <li><span class="date">Dec 2024</span> <span>One paper accepted at <strong>AAAI 2025</strong>.</span></li>
+        <li><span class="date">Aug 2023</span> <span>Joined <strong>VIU Lab, JHU</strong> as a PhD student.</span></li>
+        <li><span class="date">Dec 2022</span> <span>One paper accepted at <strong>AAAI Workshop 2023</strong>.</span></li>
+        <li><span class="date">Nov 2022</span> <span>One paper accepted at <strong>ICVGIP 2022</strong> (spotlight).</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Publications ===== -->
+  <section class="section" id="publications">
+    <div class="section-head"><h2>Selected Publications</h2><a class="eyebrow" href="https://scholar.google.com/citations?user=SGty2eUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Full list on Google Scholar ↗</a></div>
+
+    <ul class="pubs">
+      {% for post in site.posts %}
+      {% if post.categories contains 'research' and post.selected %}
+      {% assign paper_url = post.paper | default: post.arxiv %}
+      <li class="pub">
+        <div class="pub-thumb">
+          {% if post.image %}
+          {% assign webp = post.image | replace: 'images/', 'images/thumbs/' | replace: '.png', '.webp' | replace: '.jpg', '.webp' %}
+          <picture>
+            <source srcset="{{ site.baseurl }}/{{ webp }}" type="image/webp">
+            <img src="{{ site.baseurl }}/{{ post.image }}" alt="" loading="lazy" width="300" height="200">
+          </picture>
+          {% else %}
+          <div class="pub-thumb-placeholder" aria-hidden="true"></div>
           {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
+        </div>
+        <div class="pub-body">
+          <h3 class="pub-title">{% if paper_url %}<a href="{{ paper_url }}" target="_blank" rel="noopener">{{ post.title }}</a>{% else %}{{ post.title }}{% endif %}</h3>
+          <p class="pub-authors">{{ post.authors }}</p>
+          <p class="pub-venue">
+            {% if post.short %}<span class="chip{% if post.venue contains 'Review' %} review{% endif %}">{{ post.short }}</span>{% endif %}
+            <span><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</span>
+          </p>
+          <p class="pub-links">
+            {% if paper_url %}<a href="{{ paper_url }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+            {% if post.code %}<a href="{{ post.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+            {% if post.website %}<a href="{{ post.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
+            {% if post.video %}<a href="{{ post.video }}" target="_blank" rel="noopener">Video</a>{% endif %}
+            {% if post.poster %}<a href="{{ post.poster }}" target="_blank" rel="noopener">Poster</a>{% endif %}
+            {% if post.slides %}<a href="{{ post.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+          </p>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <footer class="footer">
+    <span>Layout adapted from <a href="https://jonbarron.info" target="_blank" rel="noopener">Jon Barron's website</a>.</span>
+  </footer>
+
+</main>
+
 </body>
-
 </html>
-
